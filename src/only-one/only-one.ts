@@ -16,7 +16,7 @@ class Monkey {
 }
 
 class Snake {
-    eatMouse() {
+     eatMouse() {
         return 'Eating mouse!'
     }
 }
@@ -24,12 +24,14 @@ class Snake {
 const monkey = new Monkey()
 const snake = new Snake()
 
+
 type AnimalInZoo = Monkey | Snake
 
 function eatSomething(animal: AnimalInZoo) {
     animal.eatBanana();
     animal.eatMouse();
 }
+
 
 /* Do not modify tests */
 
