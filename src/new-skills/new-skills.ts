@@ -24,13 +24,13 @@ interface Teacher {
 type SkilledPerson = Dancer | Singer | Teacher;
 
 const johnDoe: SkilledPerson = {
-    dance(): string {
+    dance() {
         return 'I can dance!'
     },
-    sing(): string {
+    sing() {
         return 'I can sing!'
     },
-    teach(): string {
+    teach() {
         return 'I can teach!'
     }
 }
