@@ -1,17 +1,19 @@
 /*
 * Przeprogramowani.ts - https://przeprogramowani.pl/typescript/
-*
+** Hint: https://www.typescriptlang.org/docs/handbook/basic-types.html
 * Warm Up!
 * ------------------
 *
 * Goal: First challenge - fix the types of variables and make sure that tests work fine!
 * 
-* Hint: https://www.typescriptlang.org/docs/handbook/basic-types.html
 */
 
-const age: string = 80;
-const firstName: number = 'Przemek';
-const todos: Map = [
+const age: number = 80;
+const firstName: string = 'Przemek';
+
+
+
+const todos: {todo:string,priority?:number}[]  = [
     { todo: 'Learn TypeScript' },
     { todo: 'Subscribe Przeprogramowani', priority: 1},
     { todo: 'Sign up for newsletter', priority: 1}

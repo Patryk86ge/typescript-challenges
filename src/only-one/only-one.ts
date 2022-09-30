@@ -1,3 +1,4 @@
+///<reference path="../../node_modules/@types/jest/index.d.ts"/>
 /*
 * Przeprogramowani.ts - https://przeprogramowani.pl/typescript/
 *
@@ -9,36 +10,41 @@
 * Hint: https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types
 */
 
+
 class Monkey {
-    eatBanana() {
-        return 'Eating banana!'
-    }
+  eatBanana() {
+    return 'Eating banana!'
+  }
 }
 
 class Snake {
-     eatMouse() {
-        return 'Eating mouse!'
-    }
+  eatMouse() {
+    return 'Eating mouse!'
+  }
 }
 
 const monkey = new Monkey()
 const snake = new Snake()
 
-
 type AnimalInZoo = Monkey | Snake
 
 function eatSomething(animal: AnimalInZoo) {
-    animal.eatBanana();
-    animal.eatMouse();
+  if (animal instanceof Monkey) {
+    return animal.eatBanana
+    // console.log(animal.eatBanana());
+  }
+  else if (animal instanceof Snake){
+    return animal.eatMouse
+    // console.log(animal.eatMouse());
+  }
 }
-
 
 /* Do not modify tests */
 
 test('should eat banana', () => {
-    expect(eatSomething(monkey)).toBe('Eating banana!')
+  expect(eatSomething(monkey)).toBe('Eating banana!')
 })
 
 test('should eat mouse', () => {
-    expect(eatSomething(snake)).toBe('Eating mouse!')
+  expect(eatSomething(snake)).toBe('Eating mouse!')
 })
